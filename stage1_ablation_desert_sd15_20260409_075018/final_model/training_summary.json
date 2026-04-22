@@ -1,0 +1,56 @@
+{
+  "run_name": "stage1_ablation_desert_sd15_20260409_075018",
+  "landscape_category": "desert",
+  "total_steps": 1301,
+  "final_train_loss": 0.14472771798027678,
+  "final_val_horizon": 0.29990671641791045,
+  "train_images": 937,
+  "val_images": 105,
+  "config": {
+    "base_model": "runwayml/stable-diffusion-v1-5",
+    "vae_model": "runwayml/stable-diffusion-v1-5",
+    "resolution": [
+      1024,
+      536
+    ],
+    "lora_rank": 16,
+    "lora_alpha": 16,
+    "lora_dropout": 0.1,
+    "ip_rank": 8,
+    "ip_num_tokens": 1,
+    "ip_scale_init": 1.0,
+    "cfg_drop_both": 0.05,
+    "cfg_drop_text_only": 0.05,
+    "cfg_drop_anchor_only": 0.05,
+    "train_batch_size": 1,
+    "gradient_accumulation_steps": 4,
+    "max_train_steps": 1301,
+    "learning_rate": 0.0001,
+    "lr_warmup_steps": 100,
+    "lr_scheduler": "cosine",
+    "weight_decay": 0.01,
+    "grad_clip": 1.0,
+    "mixed_precision": "bf16",
+    "save_steps": 500,
+    "validation_steps": 500,
+    "logging_steps": 25,
+    "landscape_category": "desert",
+    "negative_prompt": "painting, illustration, cartoon, oil painting, watercolor, brush strokes, artistic, sketch, drawing, animated, render, CGI",
+    "validation_prompts": [
+      "RAW photo, photorealistic photograph of desert landscape at golden hour, DSLR, 8K",
+      "RAW photo, photorealistic photograph of dramatic desert scenery, DSLR, 8K",
+      "RAW photo, photorealistic photograph of desert at sunrise, wide angle, DSLR, 8K",
+      "RAW photo, photorealistic photograph of cinematic desert landscape, DSLR, 8K"
+    ]
+  },
+  "architecture": {
+    "lora_rank": 16,
+    "lora_alpha": 16,
+    "ip_rank": 8,
+    "ip_num_tokens": 1,
+    "fourier_freqs": 16,
+    "svd_init": true,
+    "anchor_proj_params": 233472,
+    "ip_adapter_params": 396288
+  }
+}
